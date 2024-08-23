@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+
 public class Jogo {
     private String titulo;
     private String classificacao_etaria;
@@ -43,6 +46,6 @@ public class Jogo {
 
     @Override
     public String toString() {
-        return "Título: " + this.titulo + "\nClassificação Etária: " + this.classificacao_etaria + "\nPreço: R$" + Double.toString(preco);
+        return "Título: " + this.titulo + "\nClassificação Etária: " + this.classificacao_etaria + "\nPreço: R$" + String.format("%.2f", new BigDecimal(preco));
     }
 }
